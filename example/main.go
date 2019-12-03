@@ -7,10 +7,8 @@ import (
 )
 
 func main() {
-
-	app, err := peony.New()
-	if err != nil {
+	app := peony.New()
+	if err := app.Run(); err != nil {
 		log.Fatal(err)
 	}
-	app.Start()
 }
